@@ -23,6 +23,7 @@ int main()
         "id, minX, maxX, minY, maxY, minZ, maxZ, +data BLOB)";
     assert (sqlite3_exec(db, sql_create_table.c_str(), NULL, NULL, &errmsg) == SQLITE_OK);
     assert (sqlite3_exec(db, "PRAGMA page_size=16384;", NULL, NULL, &errmsg) == SQLITE_OK);
+    assert (sqlite3_exec(db, "PRAGMA journal_mode=WAL;", NULL, NULL, &errmsg) == SQLITE_OK);
 
     // try
     // {
