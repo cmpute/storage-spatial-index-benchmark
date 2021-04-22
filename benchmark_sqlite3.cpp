@@ -106,7 +106,7 @@ int main()
             assert (sqlite3_finalize(stmt) == SQLITE_OK);
 
             cout << "Query time: " << timer_end_ms(tstart, boxes.size()) << " ms/box" << endl;
-            cout << "Query sum: " << result << endl;
+            cout << "Query checksum: " << result << endl;
             // return result;
         };
 

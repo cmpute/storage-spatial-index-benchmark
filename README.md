@@ -55,3 +55,29 @@ Current file size: 8536064
 End
 File size after flush: 8536064
 ```
+## Boost.Geometry
+Note that support for persistent storage is done through memory mapped file, which is not inherently dynamic sized. So this approach is not strictly file storage based.
+
+```
+===== Insertion test with 100 boxes =====
+Insertion time: 0.1 ms/box
+Current file size after shrink: 11856
+===== Query test with 100 boxes =====
+Query time: 0.01 ms/box
+Query checksum: 140737406067016
+===== Insertion test with 1000 boxes =====
+Insertion time: 0.184 ms/box
+Current file size after shrink: 68304
+===== Query test with 1000 boxes =====
+Query time: 0.013 ms/box
+Query checksum: 140737406874052
+===== Insertion test with 10000 boxes =====
+Insertion time: 0.2023 ms/box
+Current file size after shrink: 624144
+===== Query test with 10000 boxes =====
+Query time: 0.0217 ms/box
+Query checksum: 140737417957840
+===== Insertion test with 100000 boxes =====
+Insertion time: 0.19517 ms/box
+Current file size after shrink: 6190608
+```

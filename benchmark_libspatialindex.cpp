@@ -122,7 +122,7 @@ int main()
         // warm up
         boxes3d_t boxes = generate_boxes(100);
         insert_test(boxes, true);
-        
+
         boxes = generate_boxes(100);
         insert_test(boxes);
         boxes = generate_boxes(100);
